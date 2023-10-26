@@ -1,6 +1,6 @@
 {
-  "name": "jsvat",
-  "version": "2.5.3",
+  "name": "jsvat-next",
+  "version": "3.0.0",
   "description": "Check the validity of the format of an EU VAT number",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/es6/index.js",
@@ -22,10 +22,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
+    "url": "git://github.com/mathieumagalhaes/jsvat-next.git"
+  },
+  "forkedFrom": {
+    "type": "git",
     "url": "git://github.com/se-panfilov/jsvat.git"
   },
   "bugs": {
-    "url": "https://github.com/se-panfilov/jsvat/issues"
+    "url": "https://github.com/mathieumagalhaes/jsvat-next/issues"
   },
   "homepage": "https://se-panfilov.github.io/jsvat/",
   "keywords": [
@@ -49,6 +53,7 @@
   "ignore": {},
   "author": "S.Panfilov <se-panfilov@ya.ru> (https://se-panfilov.github.io)",
   "contributors": [
+    "Mathieu Magalhaes <mathieu.magalhaes@gmail.com>",
     "Wilgert Velinga <wilgert@wilgert.nl> (http://wilgert.nl)"
   ],
   "private": false,

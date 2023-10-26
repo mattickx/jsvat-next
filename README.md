@@ -1,18 +1,25 @@
-[![Known Vulnerabilities](https://snyk.io/test/github/se-panfilov/jsvat/badge.svg?targetFile=package.json)](https://snyk.io/test/github/se-panfilov/jsvat?targetFile=package.json)
-[![Code Climate](https://codeclimate.com/github/se-panfilov/jsvat/badges/gpa.svg)](https://codeclimate.com/github/se-panfilov/jsvat)
-[![Build Status](https://travis-ci.org/se-panfilov/jsvat.svg?branch=master)](https://travis-ci.org/se-panfilov/jsvat)
-[![npm version](https://badge.fury.io/js/jsvat.svg)](http://badge.fury.io/js/jsvat)
-[![devDependency Status](https://david-dm.org/se-panfilov/jsvat/dev-status.svg)](https://david-dm.org/se-panfilov/jsvat#info=devDependencies)
-[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/se-panfilov/jsvat/blob/master/LICENSE)
+[![Known Vulnerabilities](https://snyk.io/test/github/mathieumagalhaes/jsvat-next/badge.svg?targetFile=package.json)](https://snyk.io/test/github/mathieumagalhaes/jsvat-next?targetFile=package.json)
 
-[![NPM](https://nodei.co/npm/jsvat.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/jsvat/)
-[![Package Quality](http://npm.packagequality.com/badge/jsvat.png)](http://packagequality.com/#?package=jsvat)
+<!-- [![Code Climate](https://codeclimate.com/github/mathieumagalhaes/jsvat-next/badges/gpa.svg)](https://codeclimate.com/github/mathieumagalhaes/jsvat-next)
+[![Build Status](https://travis-ci.org/mathieumagalhaes/jsvat-next.svg?branch=master)](https://travis-ci.org/mathieumagalhaes/jsvat-next) -->
 
-## jsvat
+[![npm version](https://badge.fury.io/js/jsvat-next.svg)](http://badge.fury.io/js/jsvat-next)
 
+<!-- [![devDependency Status](https://david-dm.org/mathieumagalhaes/jsvat-next/dev-status.svg)](https://david-dm.org/mathieumagalhaes/jsvat-next#info=devDependencies) -->
+
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/mathieumagalhaes/jsvat-next/blob/master/LICENSE)
+[![NPM](https://nodei.co/npm/jsvat-next.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/jsvat-next/)
+[![Package Quality](http://npm.packagequality.com/badge/jsvat-next.png)](http://packagequality.com/#?package=jsvat-next)
+
+## jsvat-next
+
+A fork of https://github.com/se-panfilov/jsvat since it was unmaintained for over a year with open PR's that were important to add.
+
+<!--
 [[Demo and Examples]][2]
 
 Check the validity of the format of an EU VAT number. No dependencies.
+ -->
 
 ## What is it?
 
@@ -33,17 +40,17 @@ Small library to check validity VAT numbers (European + some others counties). (
 Installation:
 
 ```bash
-npm i jsvat --save
+npm i jsvat-next --save
 ```
 
-(or `yarn add jsvat`)
+(or `yarn add jsvat-next`)
 
-For legacy versions (below v2.0.0) also possible: Bower: `bower i jsvat --save`
+For legacy versions (below v2.0.0) also possible: Bower: `bower i jsvat-next --save`
 
 ## Getting Started
 
 ```javascript
-import { checkVAT, belgium, austria } from 'jsvat';
+import { checkVAT, belgium, austria } from 'jsvat-next';
 
 checkVAT('BE0411905847', [belgium]); // true: accept only Belgium VATs
 checkVAT('BE0411905847', [belgium, austria]); // true: accept only Belgium or Austria VATs
@@ -53,7 +60,7 @@ checkVAT('BE0411905847', [austria]); // false: accept only Austria VATs
 or
 
 ```javascript
-import { checkVAT, countries } from 'jsvat';
+import { checkVAT, countries } from 'jsvat-next';
 ('countries');
 checkVAT('BE0411905847', countries); // check against all supported countries
 ```
@@ -69,7 +76,7 @@ export interface VatCheckResult {
   value?: string; // 'BE0411905847': your VAT without extra characters (like '-', spaces, etc)
   isValid: boolean; // The main result. Indicates if VAT is correct against provided countries or not
   isValidFormat: boolean; // Indicates the validation of the format of VAT only. E.g. "BE0411905847" is a valid VAT, and "BE0897221791" is not. But they both has valid format, so "isValidFormat" will return "true"
-  isSupportedCountry: boolean; // Indicates if "jsvat" could recognize the VAT. Sometimes you want to understand - if it's an invalid VAT from supported country or from an unknown one
+  isSupportedCountry: boolean; // Indicates if "jsvat-next" could recognize the VAT. Sometimes you want to understand - if it's an invalid VAT from supported country or from an unknown one
   country?: {
     // VAT's country (null if not found). By "supported" I mean imported.
     name: string; // ISO country name of VAT
@@ -124,8 +131,8 @@ export interface VatCheckResult {
 ## How to import all countries at once?
 
 ```javascript
-import { checkVAT, countries } from 'jsvat';
-// const { checkVAT, countries } = require('jsvat');
+import { checkVAT, countries } from 'jsvat-next';
+// const { checkVAT, countries } = require('jsvat-next');
 
 checkVAT('WD12345678', countries);
 ```
@@ -150,7 +157,7 @@ interface Country {
 Example:
 
 ```javascript
-import { checkVAT } from 'jsvat';
+import { checkVAT } from 'jsvat-next';
 
 export const wonderland = {
   name: 'Wonderland',
@@ -174,7 +181,7 @@ By default you will stick to `es6` version for browsers and build tools (webpack
 which expects you to import it as
 
 ```javascript
-import { checkVAT, belgium, austria } from 'jsvat';
+import { checkVAT, belgium, austria } from 'jsvat-next';
 ```
 
 Node.js automatically will pick up `CommonJS` version by default.
@@ -182,35 +189,35 @@ Means you could import it like:
 
 ```jsx harmony
 // Modern Frontend and Node
-const { checkVAT, belgium, austria } = require('jsvat');
+const { checkVAT, belgium, austria } = require('jsvat-next');
 
 // Node.js
-const { checkVAT, belgium, austria } = require('jsvat');
+const { checkVAT, belgium, austria } = require('jsvat-next');
 
 // Legacy Frontend
-<script src="whatever/jsvat/lib/umd/index.js"></script>;
+<script src="whatever/jsvat-next/lib/umd/index.js"></script>;
 ```
 
 Alternatively you can specify which module system you do want, e.g.:
 
 ```jsx harmony
 // CommonJS (i.g nodejs)
-const { checkVAT, belgium, austria } = require('jsvat/lib/commonjs');
+const { checkVAT, belgium, austria } = require('jsvat-next/lib/commonjs');
 
 // ES6
-import { checkVAT, belgium, austria } from 'jsvat/lib/es6';
+import { checkVAT, belgium, austria } from 'jsvat-next/lib/es6';
 
 // UMD
-<script src="whatever/jsvat/lib/umd/index.js"></script>;
+<script src="whatever/jsvat-next/lib/umd/index.js"></script>;
 
 // AMD
-const { checkVAT, belgium, austria } = require('jsvat/lib/amd');
+const { checkVAT, belgium, austria } = require('jsvat-next/lib/amd');
 
 // System
-import { checkVAT, belgium, austria } from 'jsvat/lib/system';
+import { checkVAT, belgium, austria } from 'jsvat-next/lib/system';
 ```
 
-## How jsvat checks validity?
+## How jsvat-next checks validity?
 
 There is 2-step check:
 
@@ -260,4 +267,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [1]: https://en.wikipedia.org/wiki/VAT_identification_number
-[2]: https://se-panfilov.github.io/jsvat
+
+<!-- [2]: https://mathieumagalhaes.github.io/jsvat-next -->
