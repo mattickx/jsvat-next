@@ -32,7 +32,6 @@ function isHealthAuthorities(vat: string): boolean {
 }
 
 function isStandardOrCommercialNumber(vat: string, multipliers: ReadonlyArray<number>): boolean {
-  console.log('isStandardOrCommercialNumber', vat);
   let total = 0;
 
   // 0 VAT numbers disallowed!

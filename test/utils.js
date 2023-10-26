@@ -3,7 +3,7 @@ import { checkVAT } from '../index';
 export function checkValidVat(vat, countriesList, codes, name) {
   const result = checkVAT(vat, countriesList);
 
-  if (!result.isValid) console.info('Invalid VAT:', vat);
+  if (!result.isValid) console.info('Invalid VAT:', { vat, countriesList });
 
   expect(result.isValid).toBe(true);
   expect(result.isSupportedCountry).toBe(true);
