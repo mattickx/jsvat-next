@@ -93,6 +93,7 @@ export interface VatCheckResult {
 ## List of supported Countries:
 
 - Andorra
+- Australia
 - Austria
 - Belgium
 - Brazil
