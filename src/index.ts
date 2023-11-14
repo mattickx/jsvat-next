@@ -1,5 +1,6 @@
 import {
   andorra,
+  australia,
   austria,
   belgium,
   brazil,
@@ -39,6 +40,7 @@ import { Country } from './lib/jsvat';
 
 export const countries: ReadonlyArray<Country> = [
   andorra,
+  australia,
   austria,
   belgium,
   brazil,
@@ -77,6 +79,7 @@ export const countries: ReadonlyArray<Country> = [
 
 export {
   andorra,
+  australia,
   austria,
   belgium,
   brazil,
