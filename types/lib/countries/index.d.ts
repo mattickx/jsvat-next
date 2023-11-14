@@ -1,4 +1,5 @@
 export { andorra } from './andorra';
+export { australia } from './australia';
 export { austria } from './austria';
 export { belgium } from './belgium';
 export { brazil } from './brazil';

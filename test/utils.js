@@ -3,7 +3,7 @@ import { checkVAT } from '../index';
 export function checkValidVat(vat, countriesList, codes, name) {
   const result = checkVAT(vat, countriesList);
 
-  if (!result.isValid) console.info('Invalid VAT:', { vat, countriesList });
+  if (!result.isValid) console.info('Error checkValidVat VAT:', { vat, countriesList, result });
 
   expect(result.isValid).toBe(true);
   expect(result.isSupportedCountry).toBe(true);
@@ -16,14 +16,16 @@ export function checkValidVat(vat, countriesList, codes, name) {
 
 export function checkInvalidVat(vat, countriesList) {
   const result = checkVAT(vat, countriesList);
-  if (result.isValid) console.info('Following VAT should be invalid:', vat);
+  if (result.isValid) console.info('Error checkInvalidVat VAT:', { vat, countriesList, result });
   expect(result.isValid).toBe(false);
 }
 
 export function checkOnlyValidFormatVat(vat, countriesList) {
   const result = checkVAT(vat, countriesList);
 
-  if (!result.isValid) console.info('Invalid VAT:', vat);
+  if (result.isValid || !result.isSupportedCountry || !result.isValidFormat) {
+    console.info('Error checkOnlyValidFormatVat VAT:', { vat, countriesList, result });
+  }
 
   expect(result.isValid).toBe(false);
   expect(result.isSupportedCountry).toBe(true);
