@@ -1,0 +1,15 @@
+@import url(pico.css);
+
+.mb-0 {
+    margin-bottom: 0px;
+}
+
+.d-none {
+    display: none;
+}
+
+.output {
+    background:#1a1f28;
+    color:#969eaf;
+    margin-top: 21px;
+}
