@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jsvat-next in the browser</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <article aria-label="Form example" class="component">
+        <h1>jsvat-next in the browser</h1>
+        <form>
+          <div class="grid">
+            <label>
+              <span>VAT number</span>
+              <input type="text" placeholder="Input VAT number" aria-label="VAT number" required />
+            </label>
+            <label>
+              <span>Select countries</span>
+              <select aria-label="Select countries..." size="10">
+                <option value="countries" selected>All countries</option>
+                <option disabled>--------------</option>
+              </select>
+            </label>
+          </div>
+          <button type="submit" class="mb-0">Check VAT</button>
+        </form>
+
+        <div id="output" class="d-none">
+          <pre class="console output mb-0"><code></code></pre>
+        </div>
+      </article>
+    </main>
+
+    <script src="../../lib/umd/index.js"></script>
+    <script>
+      const { checkVAT, countries } = jsvat;
+
+      const form = document.querySelector('form');
+      const inputVAT = document.querySelector('input');
+      const selectedCountry = document.querySelector('select');
+      const output = document.querySelector('pre code');
+
+      countries.map((lang) => {
+        let opt = document.createElement('option');
+        opt.value = lang.name;
+        opt.innerHTML = lang.name;
+        selectedCountry.append(opt);
+      });
+
+      const showOutput = (result) => (output.innerText = JSON.stringify(result, null, 4));
+
+      const onFormSubmit = (event) => {
+        event.preventDefault();
+        let result = null;
+
+        if (selectedCountry.value === 'countries') {
+          result = checkVAT(inputVAT.value, countries);
+        } else {
+          const countryFound = countries.find((country) => country.name === selectedCountry.value);
+          result = checkVAT(inputVAT.value, [countryFound]);
+        }
+
+        showOutput(result);
+        document.querySelector('#output').classList.remove('d-none');
+      };
+
+      form.addEventListener('submit', onFormSubmit);
+    </script>
+  </body>
+</html>
