@@ -33,14 +33,16 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Upload artifact
+      - name: Upload library artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          name: browser-example
-          path: |
-            ./lib/umd/*
-            ./examples/in-browser/*
-            ./index.html
+          name: library
+          path: ./lib/umd/
+      - name: Upload example artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: example
+          path: ./examples/in-browser/
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
