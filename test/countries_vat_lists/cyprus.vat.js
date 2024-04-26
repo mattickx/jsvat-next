@@ -42,7 +42,8 @@ export const valid = [
   'CY90000448S',
   'CY90002066W',
   'CY99000027S',
-  'CY99200002N'
+  'CY99200002N',
+  'CY60029000O'
 ];
 
 export const validOnlyByFormat = ['CY12000000C', 'CY12000001C', 'CY12000002C', 'CY12000003C'];

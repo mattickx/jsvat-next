@@ -20,7 +20,7 @@ export const cyprus: Country = {
   },
   rules: {
     multipliers: {},
-    regex: [/^(CY)([0-59]\d{7}[A-Z])$/]
+    regex: [/^(CY)(\d{8}[A-Z])$/]
   }
 };
 
