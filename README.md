@@ -1,13 +1,13 @@
-[![Known Vulnerabilities](https://snyk.io/test/github/mathieumagalhaes/jsvat-next/badge.svg?targetFile=package.json)](https://snyk.io/test/github/mathieumagalhaes/jsvat-next?targetFile=package.json)
+[![Known Vulnerabilities](https://snyk.io/test/github/mattickx/jsvat-next/badge.svg?targetFile=package.json)](https://snyk.io/test/github/mattickx/jsvat-next?targetFile=package.json)
 
-<!-- [![Code Climate](https://codeclimate.com/github/mathieumagalhaes/jsvat-next/badges/gpa.svg)](https://codeclimate.com/github/mathieumagalhaes/jsvat-next)
-[![Build Status](https://travis-ci.org/mathieumagalhaes/jsvat-next.svg?branch=master)](https://travis-ci.org/mathieumagalhaes/jsvat-next) -->
+<!-- [![Code Climate](https://codeclimate.com/github/mattickx/jsvat-next/badges/gpa.svg)](https://codeclimate.com/github/mattickx/jsvat-next)
+[![Build Status](https://travis-ci.org/mattickx/jsvat-next.svg?branch=master)](https://travis-ci.org/mattickx/jsvat-next) -->
 
 [![npm version](https://badge.fury.io/js/jsvat-next.svg)](http://badge.fury.io/js/jsvat-next)
 
-<!-- [![devDependency Status](https://david-dm.org/mathieumagalhaes/jsvat-next/dev-status.svg)](https://david-dm.org/mathieumagalhaes/jsvat-next#info=devDependencies) -->
+<!-- [![devDependency Status](https://david-dm.org/mattickx/jsvat-next/dev-status.svg)](https://david-dm.org/mattickx/jsvat-next#info=devDependencies) -->
 
-[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/mathieumagalhaes/jsvat-next/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/mattickx/jsvat-next/blob/master/LICENSE)
 [![NPM](https://nodei.co/npm/jsvat-next.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/jsvat-next/)
 [![Package Quality](http://npm.packagequality.com/badge/jsvat-next.png)](http://packagequality.com/#?package=jsvat-next)
 
@@ -269,4 +269,4 @@ SOFTWARE.
 
 [1]: https://en.wikipedia.org/wiki/VAT_identification_number
 
-<!-- [2]: https://mathieumagalhaes.github.io/jsvat-next -->
+<!-- [2]: https://mattickx.github.io/jsvat-next -->
