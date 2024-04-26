@@ -4,7 +4,7 @@ export { austria } from './austria';
 export { belgium } from './belgium';
 export { brazil } from './brazil';
 export { bulgaria } from './bulgaria';
-export { croatia } from './croatiat';
+export { croatia } from './croatia';
 export { cyprus } from './cyprus';
 export { czechRepublic } from './czechRepublic';
 export { denmark } from './denmark';
