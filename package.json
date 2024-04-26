@@ -7,7 +7,7 @@
   "jsnext:main": "./lib/es6/index.js",
   "types": "./types/index.d.ts",
   "scripts": {
-    "build": "rimraf lib && yarn build:commonjs && yarn build:es6 && yarn build:amd && yarn build:umd && yarn build:system",
+    "build": "rimraf lib && yarn build:commonjs && yarn build:es6 && yarn build:amd && yarn build:umd && yarn build:system && yarn minify && echo '*\n!.gitignore' > lib/.gitignore",
     "build:commonjs": "yarn ts --outDir lib/commonjs --module CommonJS --target ES5",
     "build:es6": "yarn ts --outDir lib/es6 --module ES6",
     "build:amd": "yarn ts --outDir lib/amd --module AMD",
@@ -17,7 +17,8 @@
     "prettier:check": "prettier --check 'src/**/*.ts'",
     "ts": "tsc -p tsconfig.json",
     "test": "./node_modules/.bin/jest",
-    "lint": "tslint --project ."
+    "lint": "tslint --project .",
+    "minify": "node ./scripts/minify.js"
   },
   "license": "MIT",
   "repository": {
@@ -71,7 +72,8 @@
     "tslint": "6.1.3",
     "tslint-config-prettier": "1.18.0",
     "tslint-immutable": "6.0.1",
-    "typescript": "4.2.4"
+    "typescript": "4.2.4",
+    "uglify-js": "3.17.4"
   },
   "husky": {
     "hooks": {

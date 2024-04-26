@@ -1,9 +1,11 @@
+lib/**
+
+local.js
+coverage
+package-lock.json
+
 *.log
 node_modules
 .idea
 .tmp
 .DS_Store
-coverage
-package-lock.json
-src/lib/**/*.js
-local.js
