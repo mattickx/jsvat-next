@@ -38,9 +38,9 @@ jobs:
         with:
           name: browser-example
           path: |
-            lib/umd/
-            examples/in-browser/
-            index.html
+            ./lib/umd/*
+            ./examples/in-browser/*
+            ./index.html
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
