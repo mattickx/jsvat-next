@@ -1,25 +1,12 @@
-[![Known Vulnerabilities](https://snyk.io/test/github/mattickx/jsvat-next/badge.svg?targetFile=package.json)](https://snyk.io/test/github/mattickx/jsvat-next?targetFile=package.json)
-
-<!-- [![Code Climate](https://codeclimate.com/github/mattickx/jsvat-next/badges/gpa.svg)](https://codeclimate.com/github/mattickx/jsvat-next)
-[![Build Status](https://travis-ci.org/mattickx/jsvat-next.svg?branch=master)](https://travis-ci.org/mattickx/jsvat-next) -->
-
-[![npm version](https://badge.fury.io/js/jsvat-next.svg)](http://badge.fury.io/js/jsvat-next)
-
-<!-- [![devDependency Status](https://david-dm.org/mattickx/jsvat-next/dev-status.svg)](https://david-dm.org/mattickx/jsvat-next#info=devDependencies) -->
-
-[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/mattickx/jsvat-next/blob/master/LICENSE)
 [![NPM](https://nodei.co/npm/jsvat-next.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/jsvat-next/)
-[![Package Quality](http://npm.packagequality.com/badge/jsvat-next.png)](http://packagequality.com/#?package=jsvat-next)
+
+[![Known Vulnerabilities](https://snyk.io/test/github/mattickx/jsvat-next/badge.svg?targetFile=package.json)](https://snyk.io/test/github/mattickx/jsvat-next?targetFile=package.json)
+[![npm version](https://badge.fury.io/js/jsvat-next.svg)](http://badge.fury.io/js/jsvat-next)
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/mattickx/jsvat-next/blob/master/LICENSE)
 
 ## jsvat-next
 
 A fork of https://github.com/se-panfilov/jsvat since it was unmaintained for over a year with open PR's that were important to add.
-
-<!--
-[[Demo and Examples]][2]
-
-Check the validity of the format of an EU VAT number. No dependencies.
- -->
 
 ## What is it?
 
@@ -98,19 +85,16 @@ export interface VatCheckResult {
 - Belgium
 - Brazil
 - Bulgaria
-- Switzerland
+- Croatia
 - Cyprus
 - Czech Republic
-- Germany
 - Denmark
-- Greece
-- Spain
-- Europe
 - Estonia
+- Europe
 - Finland
 - France
-- United Kingdom
-- Croatia
+- Germany
+- Greece
 - Hungary
 - Ireland
 - Italy
@@ -125,9 +109,12 @@ export interface VatCheckResult {
 - Romania
 - Russia Federation
 - Serbia
-- Slovenia
 - Slovakia republic
+- Slovenia
+- Spain
 - Sweden
+- Switzerland
+- United Kingdom
 
 ## How to import all countries at once?
 
@@ -242,31 +229,3 @@ If 100% real VAT doesn't fit, try to add proper appendix.
 Support only of evergreen browsers.
 
 Legacy versions (below v2.0.0) supports all browsers down to IE9 (including IE9).
-
-## LICENSE
-
-The MIT License (MIT)
-
-Copyright (c) 2015 Sergei Panfilov
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-[1]: https://en.wikipedia.org/wiki/VAT_identification_number
-
-<!-- [2]: https://mattickx.github.io/jsvat-next -->
